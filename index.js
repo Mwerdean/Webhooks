@@ -1,6 +1,7 @@
 const request = require('request-promise')
+const dotenv = require('dotenv').config()
 
-const hook = 'https://hooks.slack.com/services/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'
+const hook = process.env.hook
 
 const getData = async function() {
     const json = await request({
